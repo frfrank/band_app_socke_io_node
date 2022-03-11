@@ -34,6 +34,18 @@
             console.log("HOLA SEÑOR", payload);
         });
 
+        socket.on("emitir-mensaje", function(payload){
+            console.log("nombre", payload.name);
+            console.log("mensaje", payload.message);
+
+        });
+
+        socket.on("active-bands", function(bands){
+            console.clear();
+            console.table(bands);
+        });
+
+
 
     </script>
 
